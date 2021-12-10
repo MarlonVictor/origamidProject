@@ -1,0 +1,62 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+
+    background-color: #FAF6ED;
+    color: #222;
+}
+
+.grid--section {
+    display: grid;
+    grid-column: 2/4;
+    grid-template-columns: 90px 300px 1fr;
+    grid-gap: 1.25rem;
+
+    width: 100%;
+    padding: .625rem;
+    margin-bottom: 4rem;
+}
+
+/* nav */
+.menu {
+    grid-column: 3/5;
+    margin: 2rem 0;
+
+    background-color: #FB5;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .625rem;
+}
+
+.menu li a {
+    display: block;
+    padding: .625rem;
+    margin-right: 10px;
+
+    color: #222;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .875rem;
+    letter-spacing: .1rem;
+}
