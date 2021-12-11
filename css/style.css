@@ -33,6 +33,17 @@ body {
     margin-bottom: 4rem;
 }
 
+/* H1 Title */
+.title {
+    grid-column: 1/4;
+    margin-bottom: 1rem;
+
+    font-family: georgia;
+    font-weight: 400;   
+    font-size: 6rem;
+    line-height: 1;
+}
+
 /* nav */
 .menu {
     grid-column: 3/5;
@@ -58,5 +69,159 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     font-size: .875rem;
-    letter-spacing: .1rem;
+    letter-spacing: .1em;
+}
+
+/* Animals Section */
+.animals--list {
+    grid-column: 2;
+    height: 370px;
+    overflow-y: scroll;
+}
+
+.animals--list::-webkit-scrollbar {
+    width: 18px;
+}
+
+.animals--list::-webkit-scrollbar-thumb {
+    background-color: #FB5;
+    border-left: 4px solid #FAF6ED;
+    border-right: 4px solid #FAF6ED;
+}
+
+.animals--description {
+    grid-column: 3;
+}
+
+.animals--description section {
+    margin-bottom: 3rem;
+}
+
+.animals h2 {
+    margin-bottom: 1rem;
+
+    color: #E54;
+    font-size: 1rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.animals h2::before {
+    display: inline-block;
+    content: '';
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+
+    background-color: #FB5;
+}
+
+.animals p {
+    margin-bottom: 1rem;
+
+    font-family: Helvetica, Arial;
+    line-height: 1.2;
+}
+
+/* FAQ Section */
+.faq--list {
+    grid-column: 2/4;
+}
+
+.faq--list dt {
+    margin: 2rem 0 .5rem;
+
+    color: #E54;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.faq--list dt::before {
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 10px;
+    margin-right: .625rem;
+
+    background-color: #FB5;
+}
+
+.faq--list dd {
+    margin-bottom: .5rem;
+    margin-left: 1.875rem;
+
+    font-family: Helvetica, Arial;
+}
+
+/* Contact Section */
+.map {
+    grid-column: 2;
+}
+
+.data {
+    grid-column: 3;
+}
+
+.data li {
+    margin-bottom: 1rem;
+    font-family: Helvetica, Arial;
+}
+
+.data li::before {
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 10px;
+    margin-right: .625rem;
+
+    background-color: #FB5;
+}
+
+/* Footer */
+.copy {
+    grid-column: 3/5;
+    margin-bottom: 2rem;
+    background-color: #FB5;
+}
+
+.copy p {
+    font-family: monospace;
+    padding: 1.25rem;
+    font-weight: 600;
+}
+
+/* Responsiveness */
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .grid--section {
+        grid-column: 1;
+        grid-template-columns: 100px 1fr;
+        grid-gap: .625rem;
+    }
+
+    .grid--section h1 {
+        font-size: 3rem;
+    }
+
+    .menu {
+        grid-column: 1;
+        margin-top: .5rem;
+    }
+
+    .animals--list {
+        grid-column: 1;
+    }
+
+    .faq--list, .data, .map {
+        grid-column: 1/3;
+    }
+
+    .copy {
+        grid-column: 1;
+        margin-bottom: .5rem;
+    }
 }
