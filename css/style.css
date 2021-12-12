@@ -147,6 +147,17 @@ body {
     font-weight: 600;
 }
 
+.faq--list dt::after {
+    content: '⮧';
+    margin-left: 5px;
+
+    font-size: 0.8rem;
+}
+
+.faq--list dt.active::after {
+    content: '⮥';
+}
+
 .faq--list dt::before {
     display: inline-block;
     content: '';
@@ -158,10 +169,16 @@ body {
 }
 
 .faq--list dd {
+    display: none;
     margin-bottom: .5rem;
     margin-left: 1.875rem;
 
     font-family: Helvetica, Arial;
+}
+
+.faq--list dd.active {
+    display: block;
+    animation: slideDown .5s forwards;
 }
 
 /* Contact Section */
@@ -245,5 +262,16 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
     }
 }
