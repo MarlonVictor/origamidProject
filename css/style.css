@@ -79,6 +79,10 @@ body {
     overflow-y: scroll;
 }
 
+.animals--list li {
+    cursor: pointer;
+}
+
 .animals--list::-webkit-scrollbar {
     width: 18px;
 }
@@ -94,7 +98,13 @@ body {
 }
 
 .animals--description section {
+    display: none;
     margin-bottom: 3rem;
+}
+
+.animals--description section.active {
+    display: block !important;
+    animation: show .5s forwards;
 }
 
 .animals h2 {
@@ -223,5 +233,17 @@ body {
     .copy {
         grid-column: 1;
         margin-bottom: .5rem;
+    }
+}
+
+/* Animation */
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
