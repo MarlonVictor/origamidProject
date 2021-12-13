@@ -11,9 +11,7 @@ function initTabNav() {
             tabDesc[index].classList.add('active')
         }
         
-        tabMenu.forEach((item, index) => {
-            item.addEventListener('click', () => activeTab(index))
-        })
+        tabMenu.forEach((item, index) => item.addEventListener('click', () => activeTab(index)))
     }
 }
 
@@ -38,5 +36,28 @@ function initAccordion() {
     }
 }
 
+// Animação de scroll suave nos links internos
+function initSmoothScroll() {
+    const internalLinks = document.querySelectorAll('.menu a[href^="#"')
+    
+    if (internalLinks.length) {
+        function scrollToSection(event) {
+            event.preventDefault()
+
+            const href = event.currentTarget.getAttribute('href')
+            const section = document.querySelector(href)
+        
+            section.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            })
+        }
+        
+        internalLinks.forEach(link => link.addEventListener('click', scrollToSection))
+    }
+}
+
+
 initTabNav()
 initAccordion()
+initSmoothScroll()
