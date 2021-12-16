@@ -33,6 +33,17 @@ body {
     margin-bottom: 4rem;
 }
 
+.section {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: .5s;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* H1 Title */
 .title {
     grid-column: 1/4;
@@ -145,6 +156,8 @@ body {
     color: #E54;
     font-family: monospace;
     font-weight: 600;
+
+    cursor: pointer;
 }
 
 .faq--list dt::after {

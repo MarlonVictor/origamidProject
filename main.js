@@ -1,14 +1,17 @@
+const activeClassName = 'active'
+
+
 // Navegação por tab na lista de animais
 function initTabNav() {
     const tabMenu = document.querySelectorAll('.animals--list li')
     const tabDesc = document.querySelectorAll('.animals--description section')
 
     if (tabMenu.length && tabDesc.length) {
-        tabDesc[0].classList.add('active')
+        tabDesc[0].classList.add(activeClassName)
         
         function activeTab(index) {
-            tabDesc.forEach(section => section.classList.remove('active'))
-            tabDesc[index].classList.add('active')
+            tabDesc.forEach(section => section.classList.remove(activeClassName))
+            tabDesc[index].classList.add(activeClassName)
         }
         
         tabMenu.forEach((item, index) => item.addEventListener('click', () => activeTab(index)))
@@ -18,7 +21,6 @@ function initTabNav() {
 // Lista com animação de acordeão na sessão de FAQ
 function initAccordion() {
     const accordionList = document.querySelectorAll('.faq--list dt')
-    const activeClassName = 'active'
 
     if (accordionList.length) {
         const toggleClass = el => {
@@ -57,7 +59,29 @@ function initSmoothScroll() {
     }
 }
 
+// Anima as sessões visíveis na window
+function initScrollAnimation() {
+    const sections = document.querySelectorAll('.section')
+    const windowHalfHeight = window.innerHeight * 0.5
+
+    if (sections.length) {
+        function animaScroll() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top
+                const isSectionVisible = (sectionTop - windowHalfHeight) < 0
+        
+                if (isSectionVisible)
+                    section.classList.add(activeClassName)
+            })
+        }
+        
+        window.addEventListener('scroll', animaScroll)
+        animaScroll()
+    }
+}
+
 
 initTabNav()
 initAccordion()
 initSmoothScroll()
+initScrollAnimation()
