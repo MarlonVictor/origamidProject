@@ -3,15 +3,17 @@ const activeClassName = 'active'
 
 // Navegação por tab na lista de animais
 function initTabNav() {
-    const tabMenu = document.querySelectorAll('.animals--list li')
-    const tabDesc = document.querySelectorAll('.animals--description section')
+    const tabMenu = document.querySelectorAll('[data-tab="menu"] li')
+    const tabDesc = document.querySelectorAll('[data-tab="desc"] section')
 
     if (tabMenu.length && tabDesc.length) {
         tabDesc[0].classList.add(activeClassName)
         
         function activeTab(index) {
+            const direction = tabDesc[index].dataset.anime
+
             tabDesc.forEach(section => section.classList.remove(activeClassName))
-            tabDesc[index].classList.add(activeClassName)
+            tabDesc[index].classList.add(activeClassName, direction)
         }
         
         tabMenu.forEach((item, index) => item.addEventListener('click', () => activeTab(index)))
@@ -20,7 +22,7 @@ function initTabNav() {
 
 // Lista com animação de acordeão na sessão de FAQ
 function initAccordion() {
-    const accordionList = document.querySelectorAll('.faq--list dt')
+    const accordionList = document.querySelectorAll('[data-anime="accordion"] dt')
 
     if (accordionList.length) {
         const toggleClass = el => {
@@ -40,7 +42,7 @@ function initAccordion() {
 
 // Animação de scroll suave nos links internos
 function initSmoothScroll() {
-    const internalLinks = document.querySelectorAll('.menu a[href^="#"')
+    const internalLinks = document.querySelectorAll('[data-scroll="smooth"] a[href^="#"]')
     
     if (internalLinks.length) {
         function scrollToSection(event) {

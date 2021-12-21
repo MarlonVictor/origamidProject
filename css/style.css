@@ -108,14 +108,17 @@ body {
     grid-column: 3;
 }
 
-.animals--description section {
+[data-tab="desc"] section {
     display: none;
     margin-bottom: 3rem;
 }
 
-.animals--description section.active {
+[data-tab="desc"] section.active {
     display: block !important;
-    animation: show .5s forwards;
+}
+
+[data-tab="desc"] section.show-right {
+    animation: showRight .5s forwards;
 }
 
 .animals h2 {
@@ -181,7 +184,7 @@ body {
     background-color: #FB5;
 }
 
-.faq--list dd {
+[data-anime="accordion"] dd {
     display: none;
     margin-bottom: .5rem;
     margin-left: 1.875rem;
@@ -189,7 +192,7 @@ body {
     font-family: Helvetica, Arial;
 }
 
-.faq--list dd.active {
+[data-anime="accordion"] dd.active {
     display: block;
     animation: slideDown .5s forwards;
 }
@@ -267,7 +270,7 @@ body {
 }
 
 /* Animation */
-@keyframes show {
+@keyframes showRight {
     from {
         opacity: 0;
         transform: translateX(-30px);
