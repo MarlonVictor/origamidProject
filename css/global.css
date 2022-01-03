@@ -199,6 +199,26 @@ body {
     animation: slideDown .5s forwards;
 }
 
+/* Numbers Section */
+.numbers--list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/4;
+    grid-gap: 1.875rem;
+}
+
+.numbers--list h3 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.numbers--list span {
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #E54;
+}
+
 /* Contact Section */
 .map {
     grid-column: 2;
@@ -263,6 +283,10 @@ body {
 
     .faq--list, .data, .map {
         grid-column: 1/3;
+    }
+
+    .numbers--list {
+        grid-column: 1/4;
     }
 
     .copy {
