@@ -254,7 +254,7 @@ body {
 
     .menu {
         grid-column: 1;
-        margin-top: .5rem;
+        margin-top: 0;
     }
 
     .animals--list {
