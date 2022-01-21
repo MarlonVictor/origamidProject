@@ -7,6 +7,7 @@ import initDropdownMenu from './modules/dropdownMenu.js'
 import initScrollAnimation from './modules/scrollAnimation.js'
 import initAnimateNumbers from './modules/animateNumbers.js'
 import initMobileMenu from './modules/mobileMenu.js'
+import initOperationTime from './modules/operationTime.js'
 
 initModal()
 initTabNav()
@@ -17,3 +18,4 @@ initDropdownMenu()
 initScrollAnimation()
 initAnimateNumbers()
 initMobileMenu()
+initOperationTime()
