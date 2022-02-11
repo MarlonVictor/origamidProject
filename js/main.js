@@ -5,9 +5,10 @@ import initAccordion from './modules/accordionAnimation.js'
 import initSmoothScroll from './modules/smoothScroll.js'
 import initDropdownMenu from './modules/dropdownMenu.js'
 import initScrollAnimation from './modules/scrollAnimation.js'
-import initAnimateNumbers from './modules/animateNumbers.js'
 import initMobileMenu from './modules/mobileMenu.js'
 import initOperationTime from './modules/operationTime.js'
+import initFetchAnimals from './modules/fetchAnimals.js'
+
 
 initModal()
 initTabNav()
@@ -16,6 +17,6 @@ initAccordion()
 initSmoothScroll()
 initDropdownMenu()
 initScrollAnimation()
-initAnimateNumbers()
 initMobileMenu()
 initOperationTime()
+initFetchAnimals()
