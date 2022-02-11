@@ -2,17 +2,22 @@ import initAnimateNumbers from './animateNumbers.js'
 
 export default function initFetchAnimals() {
     async function fetchAnimals(url) {
-        const numbersList = document.querySelector('.numbers--list')
-    
-        const animalsResponse = await fetch(url)
-        const animalsJSON = await animalsResponse.json()
-    
-        animalsJSON.forEach(animal => {
-            const animalDiv = createAnimalContent(animal)
-            numbersList.appendChild(animalDiv)
-        })
-    
-        initAnimateNumbers()
+        try {
+            const numbersList = document.querySelector('.numbers--list')
+        
+            const animalsResponse = await fetch(url)
+            const animalsJSON = await animalsResponse.json()
+        
+            animalsJSON.forEach(animal => {
+                const animalDiv = createAnimalContent(animal)
+                numbersList.appendChild(animalDiv)
+            })
+        
+            initAnimateNumbers()
+
+        } catch(err) {
+            console.log(Error(err))
+        }
     }
     
     function createAnimalContent(animal) {

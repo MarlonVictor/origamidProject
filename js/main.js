@@ -8,6 +8,7 @@ import initScrollAnimation from './modules/scrollAnimation.js'
 import initMobileMenu from './modules/mobileMenu.js'
 import initOperationTime from './modules/operationTime.js'
 import initFetchAnimals from './modules/fetchAnimals.js'
+import initFetchBitcoin from './modules/fetchBitcoin.js'
 
 
 initModal()
@@ -20,3 +21,4 @@ initScrollAnimation()
 initMobileMenu()
 initOperationTime()
 initFetchAnimals()
+initFetchBitcoin()
