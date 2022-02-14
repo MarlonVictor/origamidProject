@@ -1,0 +1,28 @@
+{
+  "name": "animais-fantasticos",
+  "version": "1.0.0",
+  "description": "Web site desenvolvido no curso de JavaScript ES6+ completo para aplicar técnicas de manipulação do DOM.",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarlonVictor/origamidProject.git"
+  },
+  "license": "MIT",
+  "author": "MarlonVictor",
+  "homepage": "https://github.com/MarlonVictor/origamidProject#readme",
+  "bugs": {
+    "url": "https://github.com/MarlonVictor/origamidProject/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
