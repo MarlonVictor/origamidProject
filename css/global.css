@@ -85,7 +85,7 @@ body {
     letter-spacing: .1em;
 }
 
-/* Animals Section */
+/* Home Section */
 .animals--list {
     grid-column: 2;
     height: 370px;
@@ -123,7 +123,7 @@ body {
     animation: showRight .5s forwards;
 }
 
-.animals h2 {
+.home h2 {
     margin-bottom: 1rem;
 
     color: #E54;
@@ -133,7 +133,7 @@ body {
     letter-spacing: .1em;
 }
 
-.animals h2::before {
+.home h2::before {
     display: inline-block;
     content: '';
     width: 40px;
@@ -143,7 +143,7 @@ body {
     background-color: #FB5;
 }
 
-.animals p {
+.home p {
     margin-bottom: 1rem;
 
     font-family: Helvetica, Arial;
@@ -197,6 +197,27 @@ body {
 [data-anime="accordion"] dd.active {
     display: block;
     animation: slideDown .5s forwards;
+}
+
+/* Animals slide Section */
+.gallery {
+    grid-column: 1 / -1;
+}
+
+.slide {
+    display: flex;
+}
+
+.slide--wrapper {
+    grid-column: 1 / -1;
+    overflow: hidden;
+}
+
+.slide--item {
+    flex-shrink: 0;
+    width: 80vw;
+    max-width: 30rem;
+    margin: 0 1.25rem;
 }
 
 /* Numbers Section */
