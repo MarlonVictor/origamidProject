@@ -10,7 +10,7 @@ import initOperationTime from './modules/operationTime.js'
 import initFetchAnimals from './modules/fetchAnimals.js'
 import initFetchBitcoin from './modules/fetchBitcoin.js'
 
-import Slide from './modules/slide'
+import { Slide, SlideNav } from './modules/slide'
 
 
 initModal()
@@ -25,5 +25,6 @@ initOperationTime()
 initFetchAnimals()
 initFetchBitcoin()
 
-const slide = new Slide('ul.slide', '.slide--wrapper')
+const slide = new SlideNav('ul.slide', '.slide--wrapper')
 slide.init()
+slide.addArrow('[data-slide="prev"]', '[data-slide="next"]')

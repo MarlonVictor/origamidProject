@@ -208,9 +208,14 @@ body {
     display: flex;
 }
 
+.slide:hover {
+    will-change: transform;
+}
+
 .slide--wrapper {
     grid-column: 1 / -1;
     overflow: hidden;
+    transition: .3s;
 }
 
 .slide--item {
@@ -218,6 +223,17 @@ body {
     width: 80vw;
     max-width: 30rem;
     margin: 0 1.25rem;
+    opacity: .8;
+    transform: scale(.8);
+    transition: .3s;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0, .4);
+}
+
+.slide--item.active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Numbers Section */
