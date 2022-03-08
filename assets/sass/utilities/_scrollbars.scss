@@ -1,0 +1,11 @@
+@mixin listScrollbar($color) {
+    &::-webkit-scrollbar {
+        width: 18px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $color;
+        border-left: 4px solid $white-bg;
+        border-right: 4px solid $white-bg;
+    }
+}

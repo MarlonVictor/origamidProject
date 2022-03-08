@@ -1,0 +1,18 @@
+@import '../sass/mixins';
+@import '../sass/theme';
+@import '../sass/variables';
+
+@import '../sass/utilities/animation';
+@import '../sass/utilities/responsive';
+@import '../sass/utilities/scrollbars';
+@import '../sass/utilities/reset';
+
+@import '../sass/components/dropdownMenu';
+@import '../sass/components/header';
+@import '../sass/components/modal';
+@import '../sass/components/tooltip';
+
+
+.body--home {
+    @import '../sass/pages/home';
+}

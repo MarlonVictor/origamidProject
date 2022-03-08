@@ -1,0 +1,39 @@
+[data-dropdown] {
+    position: relative;
+
+    .dropdown--menu {
+        display: none;
+
+        position: absolute;
+        top: 38px;
+
+        background: $secondary-color;
+        border: 2px solid $black-3;
+
+        z-index: 200;
+        animation: show-up .3s forwards;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -10px;
+        
+            width: 0px;
+            height: 0px;
+        
+            border-bottom: 10px solid $secondary-color;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        li a:hover {
+            color: $white;
+        }
+    }
+
+    &:hover .dropdown--menu,
+    &.active .dropdown--menu {
+        display: block;
+    }
+}

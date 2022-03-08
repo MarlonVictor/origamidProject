@@ -1,0 +1,29 @@
+{
+    //SASS COMPILER SETTINGS ============================================
+    "liveSassCompile.settings.formats": [{
+            "format": "compressed", //compressed or expanded 
+            "extensionName": ".compilado.css",
+            "savePath": "assets/css" //diretorio para salvar o arquivo .css
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "assets/sass/styles.scss"
+
+    ],
+    //config que gera .map 
+    "liveSassCompile.settings.generateMap": true,
+    // prefix
+    "liveSassCompile.settings.autoprefix": [
+        "> 2%",
+        // "last 2 versions"
+    ],
+    //nao mostra a barra || ctrl+shift+u
+    "liveSassCompile.settings.showOutputWindowOn": "Error",
+    "scss.showErrors": true,
+    "discord.enabled": true,
+    "[html]": {
+        "editor.formatOnSave": true,
+    },
+
+    // ===========================================================================
+}
